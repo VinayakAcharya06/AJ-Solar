@@ -1,0 +1,6 @@
+{
+  "name": "AJ Solar — Architectural Clean Energy Systems",
+  "description": "Configure custom solar and battery energy systems, simulate real-time energy flow, track savings and installation progress, and export project proposals as PDF reports.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
