@@ -39,7 +39,7 @@ export function generateProposalPdf(
   doc.setFontSize(8.5);
   doc.setTextColor(148, 163, 184);
   doc.text('AEDB Certified Solar EPC · NEPRA Bi-Directional Net Metering Specialists', margin, 29);
-  doc.text('Lahore · Islamabad · Karachi · Faisalabad | UAN: +92 (042) 111-AJ-SOLAR', margin, 35);
+  doc.text('Lead Engineer: Engr. Vinayak · vinayakacharya376@gmail.com | Helpline: +92 (300) 845-SOLAR', margin, 35);
 
   // Proposal Metadata
   const todayStr = new Date().toLocaleDateString('en-PK', {
@@ -233,9 +233,24 @@ export function generateProposalPdf(
   doc.setTextColor(22, 101, 52);
   doc.text(`${financials.paybackPeriodYears} Years (${formatPkr(financials.lifetime25YearSavingsPkr)} 25-Yr Profit)`, margin + colWidth * 2 + 6, yPos + 18);
 
+  // Engineer Certification Box
+  yPos += 26;
+  doc.setFillColor(248, 250, 252);
+  doc.setDrawColor(226, 232, 240);
+  doc.roundedRect(margin, yPos, contentWidth, 13, 2, 2, 'FD');
+
+  doc.setFont('helvetica', 'bold');
+  doc.setFontSize(8.5);
+  doc.setTextColor(15, 23, 42);
+  doc.text('Prepared & Certified By: Engr. Vinayak · Lead Solar EPC & NEPRA Specialist', margin + 4, yPos + 5.5);
+  doc.setFont('helvetica', 'normal');
+  doc.setFontSize(8);
+  doc.setTextColor(71, 85, 105);
+  doc.text('Official Email: vinayakacharya376@gmail.com | Helpline / WhatsApp: +92 (300) 845-SOLAR', margin + 4, yPos + 10);
+
   // Footer / Terms
-  yPos += 30;
-  doc.setFontSize(7.5);
+  yPos += 18;
+  doc.setFontSize(7);
   doc.setTextColor(148, 163, 184);
   doc.text(
     'Note: Solar quotation valid subject to site roof structural feasibility. Net metering timelines depend on DISCO/NEPRA meter availability. Payment terms: 50% advance, 40% on delivery, 10% after commissioning.',

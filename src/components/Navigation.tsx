@@ -23,7 +23,7 @@ export const Navigation: React.FC<NavigationProps> = ({
     { id: 'configurator', label: 'Solar Configurator', desc: 'Custom kW, battery & PKR cost' },
     { id: 'energy-flow', label: 'Load Shedding & Flow', desc: 'Dynamic WAPDA & UPS animation' },
     { id: 'comparison', label: 'Bill Comparison', desc: '12-Month summer peak analysis' },
-    { id: 'dashboard', label: 'NEPRA & Project Tracker', desc: '6-Phase milestone timeline' },
+    { id: 'dashboard', label: 'NEPRA & Project Tracker', desc: 'Engineer contact & instant quotation' },
   ];
 
   const handleNavClick = (id: string) => {

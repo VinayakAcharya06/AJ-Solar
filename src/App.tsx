@@ -130,7 +130,9 @@ export default function App() {
         {activeTab === 'dashboard' && (
           <div className="pt-16 sm:pt-20">
             <Dashboard
+              home={home}
               system={system}
+              setSystem={setSystem}
               financials={financials}
               isDark={isDark}
               onOpenPdfModal={() => setShowPdfModal(true)}
